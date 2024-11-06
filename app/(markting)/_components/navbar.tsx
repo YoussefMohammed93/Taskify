@@ -9,7 +9,7 @@ const Navbar = () => {
         <Logo />
         <div className="flex items-center justify-between space-x-5">
           <Button asChild variant="outline" size="sm">
-            <Link href="/sign-up">Login</Link>
+            <Link href="/sign-in">Login</Link>
           </Button>
           <Button asChild size="sm" className="hidden sm:flex">
             <Link href="/sign-up">Get Taskify for free</Link>

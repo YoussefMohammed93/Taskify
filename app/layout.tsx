@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 import { Noto_Sans } from "next/font/google";
 
 const Font = Noto_Sans({
@@ -8,9 +9,17 @@ const Font = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Taskify",
-  description:
-    "Taskify, Simplify Your Workflow with Taskify, the Ultimate Task Management Tool! Organize, prioritize, and track tasks effortlessly. Boost productivity with powerful features for teams and individuals alike. Stay on top of deadlines and streamline your projects in one intuitive platform.",
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: [
+    {
+      url: "/logo.svg",
+      href: "/logo.svg",
+    },
+  ],
 };
 
 export default function RootLayout({
