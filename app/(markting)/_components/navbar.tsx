@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center w-full h-14 fixed top-0 px-5 border-b shadow-sm bg-white">
+    <nav className="flex items-center w-full h-14 fixed top-0 px-5 border-b shadow-sm bg-white">
       <div className="flex items-center justify-between w-full md:max-w-screen-xl mx-auto">
         <Logo />
         <div className="flex items-center justify-between space-x-5">
@@ -16,7 +16,7 @@ const Navbar = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
